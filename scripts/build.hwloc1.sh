@@ -4,7 +4,7 @@ mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
 mkdir -p build && cd build
-if [ -f hwloc-${HWLOC_VERSION}.tar.gz ] ; then
+if [ !  -f hwloc-${HWLOC_VERSION}.tar.gz ] ; then
 wget https://download.open-mpi.org/release/hwloc/v1.11/hwloc-${HWLOC_VERSION}.tar.gz -O hwloc-${HWLOC_VERSION}.tar.gz
 fi
 tar -xzf hwloc-${HWLOC_VERSION}.tar.gz

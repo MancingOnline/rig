@@ -4,7 +4,7 @@ mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
 mkdir -p build && cd build
-if [ -f v${UV_VERSION}.tar.gz ] ; then
+if [ !  -f v${UV_VERSION}.tar.gz ] ; then
 wget https://github.com/libuv/libuv/archive/v${UV_VERSION}.tar.gz -O v${UV_VERSION}.tar.gz
 fi
 tar -xzf v${UV_VERSION}.tar.gz

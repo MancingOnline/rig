@@ -4,7 +4,7 @@ mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
 mkdir -p build && cd build
-if [ -f openssl-${OPENSSL_VERSION}.tar.gz ] ; then
+if [ !  -f openssl-${OPENSSL_VERSION}.tar.gz ] ; then
 wget https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz -O openssl-${OPENSSL_VERSION}.tar.gz
 fi
 tar -xzf openssl-${OPENSSL_VERSION}.tar.gz

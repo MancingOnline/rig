@@ -6,7 +6,7 @@ mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
 mkdir -p build && cd build
-if [ -f ${PKG_CODE}-${PKG_VER}.tar.gz ] ; then
+if [ !  -f ${PKG_CODE}-${PKG_VER}.tar.gz ] ; then
 wget ${PKG_REPO}/${PKG_CODE}-${PKG_VER}.tar.gz  -O ${PKG_CODE}-${PKG_VER}.tar.gz
 fi
 tar -zxvf ${PKG_CODE}-${PKG_VER}.tar.gz

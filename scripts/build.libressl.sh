@@ -4,7 +4,7 @@ mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
 mkdir -p build && cd build
-if [ -f libressl-${LIBRESSL_VERSION}.tar.gz ] ; then
+if [ !  -f libressl-${LIBRESSL_VERSION}.tar.gz ] ; then
 wget https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-${LIBRESSL_VERSION}.tar.gz -O libressl-${LIBRESSL_VERSION}.tar.gz
 fi
 tar -xzf libressl-${LIBRESSL_VERSION}.tar.gz
