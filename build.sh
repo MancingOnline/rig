@@ -9,5 +9,5 @@ cd scripts && \
      -DCMAKE_C_COMPILER=/usr/bin/gcc-6  \
     -DCMAKE_CXX_COMPILER=/usr/bin/g++-6  \
     -DCMAKE_EXE_LINKER_FLAGS="-static -static-libstdc++ -static-libgcc"  \
-    -DXMRIG_DEPS=scripts/deps \
+    -DXMRIG_DEPS=scripts/deps &&\
     make -j$(nproc)
