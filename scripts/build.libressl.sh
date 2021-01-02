@@ -1,16 +1,13 @@
 #!/bin/bash -e
-
 LIBRESSL_VERSION="3.0.2"
-
 mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
-
 mkdir -p build && cd build
-
+if [ -f libressl-${LIBRESSL_VERSION}.tar.gz ] ; then
 wget https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-${LIBRESSL_VERSION}.tar.gz -O libressl-${LIBRESSL_VERSION}.tar.gz
+fi
 tar -xzf libressl-${LIBRESSL_VERSION}.tar.gz
-
 cd libressl-${LIBRESSL_VERSION}
 ./configure --disable-shared
 make -j$(nproc || sysctl -n hw.ncpu || sysctl -n hw.logicalcpu)

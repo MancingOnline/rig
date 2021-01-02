@@ -4,4 +4,6 @@
 .idea
 /src/backend/opencl/cl/cn/cryptonight_gen.cl
 build
-libs/libuv/build
+dist
+scripts/deps
+scripts/build

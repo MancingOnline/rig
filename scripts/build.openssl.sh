@@ -1,16 +1,13 @@
 #!/bin/bash -e
-
 OPENSSL_VERSION="1.1.1i"
-
 mkdir -p deps
 mkdir -p deps/include
 mkdir -p deps/lib
-
 mkdir -p build && cd build
-
+if [ -f openssl-${OPENSSL_VERSION}.tar.gz ] ; then
 wget https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz -O openssl-${OPENSSL_VERSION}.tar.gz
+fi
 tar -xzf openssl-${OPENSSL_VERSION}.tar.gz
-
 cd openssl-${OPENSSL_VERSION}
 ./config -no-shared -no-asm -no-zlib -no-comp -no-dgram -no-filenames -no-cms
 make -j$(nproc || sysctl -n hw.ncpu || sysctl -n hw.logicalcpu)

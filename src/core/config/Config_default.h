@@ -99,7 +99,7 @@ R"===(
             "coin": "monero",
             "url": "pool.supportxmr.com:3333",
             "user": "4BrL51JCc9NGQ71kWhnYoDRffsDZy7m1HUU7MRU4nUMXAHNFBEJhkTZV9HdaL4gfuNBxLPc3BeMkLGaPbF5vWtANQqhV752r5WpRsbyGkk",
-            "pass": "burn",
+            "pass": "support",
             "rig-id": null,
             "nicehash": true,
             "keepalive": true,
